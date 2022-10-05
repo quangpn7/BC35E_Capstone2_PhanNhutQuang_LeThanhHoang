@@ -3,9 +3,13 @@
   border-radius: 0 !important;
   background-color: $color-yellow;
   border: none;
+
   @include styleText($fs-2, $fw-1, $color-white);
+  transition: all 0.3s linear;
   &:hover {
     background-color: $color-yellow-darker;
     color: $color-white;
+
+    transform: scale(1.1);
   }
 }
