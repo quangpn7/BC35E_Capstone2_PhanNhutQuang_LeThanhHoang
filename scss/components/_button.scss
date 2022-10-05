@@ -1,0 +1,11 @@
+.btn {
+  padding: 13px 34px !important;
+  border-radius: 0 !important;
+  background-color: $color-yellow;
+  border: none;
+  @include styleText($fs-2, $fw-1, $color-white);
+  &:hover {
+    background-color: $color-yellow-darker;
+    color: $color-white;
+  }
+}
