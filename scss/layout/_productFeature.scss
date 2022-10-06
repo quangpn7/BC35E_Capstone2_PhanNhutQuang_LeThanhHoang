@@ -1,4 +1,6 @@
 section.product {
+  max-width: 1280px;
+  margin: auto;
   margin-top: 46px;
   .product__header {
     h1 {
@@ -22,6 +24,8 @@ section.product {
         }
         .item-text {
           padding-left: 23px;
+          padding-right: 23px;
+
           p {
             @include styleText($fs-3, $fw-1, $color-black);
             margin-bottom: 8px !important;

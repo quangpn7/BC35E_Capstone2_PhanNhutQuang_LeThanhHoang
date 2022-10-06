@@ -58,24 +58,41 @@
       <div class="navigation__wrap">
         <ul class="nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="#" id="btnHome" onclick="getDataProduct()"
+              >Home</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Men</a>
+            <a
+              class="nav-link"
+              href="#"
+              id="btnMen"
+              value="men"
+              onclick="renderCategory('men')"
+              >Men</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Woman</a>
+            <a
+              class="nav-link"
+              href="#"
+              id="btnWoman"
+              value="women"
+              onclick="renderCategory('women')"
+              >Woman</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Kid</a>
+            <a class="nav-link" href="#" id="btnKid">Kid</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sport</a>
+            <a class="nav-link" href="#" id="btnSport">Sport</a>
           </li>
         </ul>
       </div>
     </section>
     <!-- SLIDER -->
+
     <section class="slider">
       <div class="slider__bg">
         <img src="./assets/img/image 6.png" alt="" />
@@ -86,7 +103,7 @@
         data-ride="carousel"
         data-interval="false"
       >
-        <div class="carousel-inner">
+        <div class="carousel-inner" id="sliderHolder">
           <div class="carousel-item active">
             <div class="carousel-img" id="slider__img">
               <img src="./assets/img/image 4.png" alt="" />
@@ -144,7 +161,7 @@
         <h1 class="text-center text-capitalize">-product feature-</h1>
       </div>
       <div class="product__content">
-        <div class="product__grid row">
+        <div class="product__grid row" id="productHolder">
           <div class="product__item col">
             <div class="item-upper">
               <img src="./assets/img/image 5.png" alt="itemImg" />
@@ -245,6 +262,14 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <!-- AXIOS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+      integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- MAIN JS   -->
     <script>
       $(document).ready(function () {
         $(".nav li a").click(function (e) {
@@ -256,5 +281,6 @@
         });
       });
     </script>
+    <script src="./controllers/index.js"></script>
   </body>
 </html>
