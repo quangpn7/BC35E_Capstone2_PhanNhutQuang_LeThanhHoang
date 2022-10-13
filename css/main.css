@@ -363,4 +363,89 @@ footer .footer__row-2 .footer__row .footer__block:nth-child(3) {
 }
 footer .footer__row-2 {
   background-color: #ececec !important;
+}
+
+section.register {
+  width: 1280px;
+  margin: auto;
+}
+section.register .register__title {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 40px;
+  font-weight: 400;
+  color: #000000;
+}
+section.register .register__wrap {
+  width: 1100px;
+  margin: auto;
+}
+section.register .register__wrap .register__left p.register__invalid,
+section.register .register__wrap .register__right p.register__invalid {
+  font-size: 16px;
+  font-weight: 300;
+  color: #fc0303;
+  font-style: italic;
+  display: inline;
+}
+section.register .register__wrap .register__left input,
+section.register .register__wrap .register__right input {
+  border: none;
+}
+section.register .register__wrap .register__left input:focus,
+section.register .register__wrap .register__right input:focus {
+  outline: none;
+}
+section.register .register__wrap .register__left .input-field,
+section.register .register__wrap .register__right .input-field {
+  border-bottom: 5px solid #af19e3;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+section.register .register__wrap .register__left input[type=text],
+section.register .register__wrap .register__left input[type=email],
+section.register .register__wrap .register__left input[type=number],
+section.register .register__wrap .register__left input[type=password],
+section.register .register__wrap .register__right input[type=text],
+section.register .register__wrap .register__right input[type=email],
+section.register .register__wrap .register__right input[type=number],
+section.register .register__wrap .register__right input[type=password] {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  width: 482px;
+  padding-bottom: 5px;
+}
+section.register .register__wrap .register__left .inputRequired,
+section.register .register__wrap .register__right .inputRequired {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fc0303;
+}
+section.register .register__wrap .register__left .register__gender,
+section.register .register__wrap .register__right .register__gender {
+  border: none;
+}
+section.register .register__wrap .register__left .register__gender input[type=radio],
+section.register .register__wrap .register__right .register__gender input[type=radio] {
+  height: 35px;
+  width: 35px;
+  margin-right: 5px;
+  accent-color: #af19e3;
+}
+section.register .register__wrap .register__left .register__gender span,
+section.register .register__wrap .register__right .register__gender span {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  margin-right: 30px;
+}
+section.register .register__wrap .register__left .register__gender label,
+section.register .register__wrap .register__right .register__gender label {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  margin: 0;
+  margin-right: 60px !important;
 }/*# sourceMappingURL=main.css.map */

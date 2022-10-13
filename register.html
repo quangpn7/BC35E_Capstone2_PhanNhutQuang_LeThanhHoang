@@ -35,116 +35,190 @@
   <body>
     <!-- HEADER -->
     <header>
-        <div class="header__wrap">
-          <div
-            class="header__content d-flex justify-content-between align-items-center"
-          >
-            <div class="header__logo">
-              <a href="#"
-                ><img src="./assets/img/image 3.png" alt="logoCybersoft"
-              /></a>
+      <div class="header__wrap">
+        <div
+          class="header__content d-flex justify-content-between align-items-center"
+        >
+          <div class="header__logo">
+            <a href="#"
+              ><img src="./assets/img/image 3.png" alt="logoCybersoft"
+            /></a>
+          </div>
+          <div class="header__feature d-flex align-items-center">
+            <i class="fa fa-shopping-cart"></i>
+            <span id="item_count">(1)</span>
+            <span><a href="#" id="btnLogin">Login</a></span>
+            <span><a href="#" id="btnRegister">Register</a></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- NAV -->
+    <section class="navigation">
+      <div class="navigation__wrap">
+        <ul class="nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" id="btnHome" onclick="getDataProduct()"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              id="btnMen"
+              value="men"
+              onclick="renderCategory('men')"
+              >Men</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              id="btnWoman"
+              value="women"
+              onclick="renderCategory('women')"
+              >Woman</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="btnKid">Kid</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="btnSport">Sport</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- REGISTER -->
+    <section class="register">
+      <h1 class="register__title">Register</h1>
+      <div class="register__form register__wrap row justify-content-between">
+        <!-- LEFT -->
+        <div class="register__left col-6>">
+          <!-- EMAIL -->
+          <div class="register__email input-field">
+            <input type="email" placeholder="Email" />
+            <span class="inputRequired">(*)</span>
+          </div>
+          <p class="register__invalid">* Email không hợp lệ</p>
+
+          <!-- PASSWORD -->
+          <div class="register__password input-field">
+            <input type="password" placeholder="Password" />
+            <span class="inputRequired">(*)</span>
+          </div>
+          <p class="register__invalid">* Mật khẩu không hợp lệ</p>
+
+          <div class="register__password input-field">
+            <input type="password" placeholder="Confirm password" />
+            <span class="inputRequired">(*)</span>
+          </div>
+          <p class="register__invalid">* Mật khẩu không trùng khớp</p>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="register__right col-6">
+          <!-- NAME -->
+          <div class="register__name input-field">
+            <input type="text" placeholder="Name" />
+            <span class="inputRequired">(*)</span>
+          </div>
+          <p class="register__invalid">* Tên không hợp lệ</p>
+
+          <!-- PHONE -->
+          <div class="register__phoneNumber input-field">
+            <input type="number" placeholder="Phone" />
+            <span class="inputRequired">(*)</span>
+          </div>
+          <p class="register__invalid">* Số điện thoại không hợp lệ</p>
+
+          <!-- GENDER -->
+          <div class="register__gender d-flex align-items-center input-field">
+            <span class="labelGender">Gender</span>
+            <input type="radio" id="genderMale" name="gender" value="male" />
+            <label for="genderMale">Male</label>
+            <input
+              type="radio"
+              id="genderFemale"
+              name="gender"
+              value="female"
+            />
+            <label for="genderFemale">Female</label>
+          </div>
+          <p class="register__invalid">* Vui lòng chọn giới tính</p>
+        </div>
+      </div>
+      <style>
+        /* * {
+          outline: 1px solid #f00 !important;
+        } */
+      </style>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+      <section class="footer">
+        <div class="footer__wrap">
+          <!-- ROW 1 -->
+          <div class="footer__row-1">
+            <div class="row footer__row">
+              <div class="footer__block col-4">
+                <h4>GET HELP</h4>
+                <ul class="list-unstyled">
+                  <li class="footer__liLink"><a href="#">Contact us</a></li>
+                  <li class="footer__liLink"><a href="#">Shopping</a></li>
+                  <li class="footer__liLink"><a href="#">NikeID</a></li>
+                  <li class="footer__liLink"><a href="#">Nike+</a></li>
+                </ul>
+              </div>
+              <div class="footer__block col-4">
+                <h4>ORDERS</h4>
+                <ul class="list-unstyled">
+                  <li class="footer__liLink">
+                    <a href="#">Payment options</a>
+                  </li>
+                  <li class="footer__liLink">
+                    <a href="#">Shipping and delivery</a>
+                  </li>
+                  <li class="footer__liLink"><a href="#">Returns</a></li>
+                </ul>
+              </div>
+              <div class="footer__block col-4">
+                <h4>REGISTER</h4>
+                <p>
+                  Create one account to mangage everything you do with Nike,
+                  from your shipping preferences to your Nike+ activity.
+                </p>
+                <a href="#" class="footer__redirectLink">Learn more</a>
+              </div>
             </div>
-            <div class="header__feature d-flex align-items-center">
-              <i class="fa fa-shopping-cart"></i>
-              <span id="item_count">(1)</span>
-              <span><a href="#" id="btnLogin">Login</a></span>
-              <span><a href="#" id="btnRegister">Register</a></span>
+          </div>
+          <!-- ROW 2 -->
+          <div class="footer__row-2">
+            <div class="row footer__row">
+              <div class="footer__block col-4">
+                <h4>EMAIL SIGN UP</h4>
+                <p>
+                  Be the first to know about new products and special offers.
+                </p>
+                <a href="#" class="footer__redirectLink">Sign up now</a>
+              </div>
+              <div class="footer__block col-4">
+                <h4>GIFT CARD</h4>
+                <p>Give the gift that always fits.</p>
+                <a href="#" class="footer__redirectLink">View cards</a>
+              </div>
+              <div class="footer__block col-4">
+                <h4>STORES NEAR YOU</h4>
+                <p>Locate a Nike retail store or authorized retailer.</p>
+                <a href="" class="footer__redirectLink">Search</a>
+              </div>
             </div>
           </div>
         </div>
-      </header>
-      <!-- NAV -->
-      <section class="navigation">
-        <div class="navigation__wrap">
-          <ul class="nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#" id="btnHome" onclick="getDataProduct()"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="#"
-                id="btnMen"
-                value="men"
-                onclick="renderCategory('men')"
-                >Men</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="#"
-                id="btnWoman"
-                value="women"
-                onclick="renderCategory('women')"
-                >Woman</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" id="btnKid">Kid</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" id="btnSport">Sport</a>
-            </li>
-          </ul>
-        </div>
       </section>
-      <!-- REGISTER -->
-      <section>
-        <div class="register">
-            <h3>Register</h3>
-        </div>
-        <div class="input">
-            <input type="email">
-            <input type="password">
-            <input type="password confirm">
-            <input type="name">
-            <input type="phone">
-        </div>
-      </section>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
