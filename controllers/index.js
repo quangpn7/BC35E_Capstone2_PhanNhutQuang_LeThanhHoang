@@ -98,3 +98,5 @@ function renderCategory(value) {
     console.log(err);
   });
 }
+
+let gelAllData = () => {};

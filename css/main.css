@@ -66,6 +66,34 @@ section.navigation .navigation__wrap ul li.active a::after {
   transform: scale(1.1);
 }
 
+.size__button, .btn-addRemove {
+  padding: 10px 13px !important;
+  border-radius: 0 !important;
+  margin-right: 20px;
+  background-color: #cccccc;
+  border: none;
+  font-size: 24px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.btn-addRemove {
+  line-height: 1;
+  padding: 18px 22px !important;
+  background: linear-gradient(180deg, #6181f3 0%, #7c97f5 99.48%) !important;
+  color: #ffffff;
+  margin: 0 !important;
+}
+
+.btn-addToCart {
+  display: block;
+  margin-top: 7px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #ffffff;
+  background: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #d017ee 89.71%);
+}
+
 section.slider {
   max-width: 1280px;
   margin: auto;
@@ -232,17 +260,107 @@ section.product .product__content .product__item .item-bottom .item-price.btn {
   padding: 0 !important;
 }
 
-.register {
-  position: absolute;
-  width: 156px;
-  height: 48px;
-  left: 524px;
-  top: 150px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 48px;
+section.product .product__wrap {
+  width: 1200px;
+  margin: auto;
+}
+section.product .product__wrap .product__left .product__frame {
+  padding: 109px 57px 90px 57px;
+  background-color: #f8f8f8;
+}
+section.product .product__wrap .product__right .product__info h1 {
+  font-size: 24px;
+  font-weight: 300;
   color: #000000;
-  text-align: center;
+}
+section.product .product__wrap .product__right .product__info p {
+  width: 80%;
+  line-height: 19.3px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+section.product .product__wrap .product__right .product__size span.product__sizeStatus {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #1ed90e;
+}
+section.product .product__wrap .product__right .product__price {
+  margin-top: 17px;
+}
+section.product .product__wrap .product__right .product__price span.product__price {
+  display: block;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fc0303;
+  margin-bottom: 7px;
+}
+section.product .product__wrap .product__right .product__price .product__addRemove span.product__buyCount {
+  font-size: 24px;
+  font-weight: 400;
+  color: #000000;
+  margin: 0 25px;
+}
+
+footer {
+  margin-top: 106px;
+  width: 100%;
+}
+footer .footer__row-1,
+footer .footer__row-2 {
+  background-color: #fafafa;
+  width: 100vw;
+}
+footer .footer__row-1 .footer__row,
+footer .footer__row-2 .footer__row {
+  width: 1000px;
+  margin: auto;
+  padding: 25px 0;
+}
+footer .footer__row-1 .footer__row .footer__block,
+footer .footer__row-2 .footer__row .footer__block {
+  border-right: 1px solid #dedddc;
+}
+footer .footer__row-1 .footer__row .footer__block h4,
+footer .footer__row-2 .footer__row .footer__block h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+}
+footer .footer__row-1 .footer__row .footer__block li,
+footer .footer__row-2 .footer__row .footer__block li {
+  padding: 2px 0;
+}
+footer .footer__row-1 .footer__row .footer__block a,
+footer .footer__row-2 .footer__row .footer__block a {
+  font-size: 12px;
+  font-weight: 400;
+  color: #000000;
+}
+footer .footer__row-1 .footer__row .footer__block a:hover,
+footer .footer__row-2 .footer__row .footer__block a:hover {
+  color: #dedddc;
+}
+footer .footer__row-1 .footer__row .footer__block a.footer__redirectLink,
+footer .footer__row-2 .footer__row .footer__block a.footer__redirectLink {
+  color: #df8f8b;
+}
+footer .footer__row-1 .footer__row .footer__block a.footer__redirectLink:hover,
+footer .footer__row-2 .footer__row .footer__block a.footer__redirectLink:hover {
+  color: #a56966;
+}
+footer .footer__row-1 .footer__row .footer__block p,
+footer .footer__row-2 .footer__row .footer__block p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #000000;
+}
+footer .footer__row-1 .footer__row .footer__block:nth-child(3),
+footer .footer__row-2 .footer__row .footer__block:nth-child(3) {
+  border: none;
+}
+footer .footer__row-2 {
+  background-color: #ececec !important;
 }/*# sourceMappingURL=main.css.map */
