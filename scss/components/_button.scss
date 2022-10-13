@@ -9,9 +9,13 @@
   &:hover {
     background-color: $color-yellow-darker;
     color: $color-white;
-
     transform: scale(1.1);
   }
+}
+.btn-pressed {
+  background-color: $color-yellow-darker !important;
+  color: $color-white !important;
+  transform: scale(1.1);
 }
 
 .size__button {

@@ -95,13 +95,18 @@
     <section class="product">
       <div class="product__wrap row">
         <div class="product__left col-5">
-          <img class="product__frame" src="./assets/img/image 5.png" alt="" />
+          <img
+            id="productImage"
+            class="product__frame"
+            src="./assets/img/image 5.png"
+            alt=""
+          />
         </div>
         <div class="product__right col-7">
           <!-- INFO -->
           <div class="product__info">
-            <h1>Product name</h1>
-            <p>
+            <h1 id="productName">Product name</h1>
+            <p id="productDesc">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
               pariatur sequi esse ducimus veritatis aspernatur totam inventore,
               tempore rem impedit illum qui a quae aperiam officiis, error
@@ -109,21 +114,42 @@
             </p>
           </div>
           <!-- SIZE -->
-          <div class="product__size">
+          <div class="product__size" id="productSizeHolder">
             <span class="product__sizeStatus">Available size</span>
-            <button class="size__button btn">38</button
-            ><button class="size__button btn">39</button
-            ><button class="size__button btn">40</button
-            ><button class="size__button btn">41</button
-            ><button class="size__button btn">42</button>
+            <div id="productSizeHolder">
+              <button class="size__button btn btn-pressed">38</button
+              ><button class="size__button btn">39</button
+              ><button class="size__button btn">40</button
+              ><button class="size__button btn">41</button
+              ><button class="size__button btn">42</button>
+            </div>
           </div>
           <!-- PRICE AND SELECTION -->
           <div class="product__price">
-            <span class="product__price">85$</span>
+            <span class="product__price" id="productPrice">85$</span>
             <div class="product__addRemove">
-              <button class="btn btn-addRemove">+</button>
-              <span class="product__buyCount">1</span>
-              <button class="btn btn-addRemove">-</button>
+              <button
+                id="addCount"
+                class="btn btn-addRemove"
+                onclick="countProduct(true)"
+              >
+                +
+              </button>
+              <input
+                type="number"
+                min="1"
+                max="20"
+                class="product__buyCount"
+                id="count"
+                value="1"
+              />
+              <button
+                id="removeCount"
+                class="btn btn-addRemove"
+                onclick="countProduct(false)"
+              >
+                -
+              </button>
               <button class="btn btn-addToCart">Add to cart</button>
             </div>
           </div>
@@ -306,6 +332,24 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="./scss/main.scss"></script>
+
+    <script>
+      document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+          $(".size__button").click(function (e) {
+            console.log(123);
+            $(".size__button").removeClass("btn-pressed");
+
+            var $parent = $(this);
+            $parent.addClass("btn-pressed");
+            e.preventDefault();
+          });
+        },
+        false
+      );
+    </script>
+
+    <script src="./controllers/detail.js"></script>
   </body>
 </html>

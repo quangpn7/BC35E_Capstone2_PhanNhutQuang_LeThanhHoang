@@ -5,7 +5,7 @@ section.product {
     margin: auto;
     .product__left {
       .product__frame {
-        padding: 109px 57px 90px 57px;
+        padding: 50px 50px 0 50px;
         background-color: $color-light-gray;
       }
     }
@@ -34,12 +34,21 @@ section.product {
         span.product__price {
           display: block;
           @include styleText($fs-3, $fw-3, $color-red);
-          margin-bottom: 7px;
+          margin-bottom: 17px;
         }
         .product__addRemove {
           span.product__buyCount {
             @include styleText($fs-3, $fw-2, $color-black);
             margin: 0 25px;
+          }
+          input {
+            text-align: center;
+            width: 60px;
+            border: none;
+            @include styleText($fs-3, $fw-2, $color-black);
+            &:focus {
+              outline: none;
+            }
           }
         }
       }

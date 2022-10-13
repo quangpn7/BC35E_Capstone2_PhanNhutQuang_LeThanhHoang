@@ -38,7 +38,7 @@ function renderContent(arrProduct) {
               </div>
             </div>
             <div class="item-bottom d-flex align-items-center">
-              <a href="#" class="btn">Buy now</a>
+              <a href="./detail.html?id=${product.id}" class="btn">Buy now</a>
               <span class="item-price btn">${product.price}$</span>
             </div>
           </div>
