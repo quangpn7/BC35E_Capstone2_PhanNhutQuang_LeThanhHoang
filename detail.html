@@ -46,7 +46,9 @@
           </div>
           <div class="header__feature d-flex align-items-center">
             <i class="fa fa-shopping-cart"></i>
-            <span id="item_count">(1)</span>
+            <div>
+              <span id="item_count">(0)</span>
+            </div>
             <span><a href="#" id="btnLogin">Login</a></span>
             <span><a href="./register.html" id="btnRegister">Register</a></span>
           </div>
@@ -126,6 +128,7 @@
                 class="product__buyCount"
                 id="count"
                 value="1"
+                onchange="resetCount(value)"
               />
               <button
                 id="removeCount"
@@ -134,7 +137,9 @@
               >
                 -
               </button>
-              <button class="btn btn-addToCart">Add to cart</button>
+              <button class="btn btn-addToCart" onclick="addCart()">
+                Add to cart
+              </button>
             </div>
           </div>
         </div>

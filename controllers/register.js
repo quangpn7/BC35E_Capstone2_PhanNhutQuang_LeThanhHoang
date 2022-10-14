@@ -1,3 +1,4 @@
+let createUser = new CreateUser();
 let validation = new Validation();
 //FUNCTION GET USER INFO
 let getUserInfo = () => {
@@ -20,10 +21,10 @@ let getUserInfo = () => {
     var userGenderInp = null;
   }
   let userGender = userGenderInp;
-  //   let userGender = document.querySelector('input[name="gender"]:checked').value;
+
   //   <----------------------------------------->
   //CHECK VALIDATION
-  let isValid = false;
+  var isValid = true;
 
   // EMAIL
   isValid &=
@@ -34,6 +35,7 @@ let getUserInfo = () => {
       "#emailErr",
       "* Email không hợp lệ"
     );
+
   // PASS
   isValid &=
     validation.checkBlank(userPass, "#passErr", "* Vui lòng nhập mật khẩu") &&
@@ -56,6 +58,7 @@ let getUserInfo = () => {
       "#confirmPassErr",
       "* Mật khẩu không trùng khớp"
     );
+
   // NAME
   isValid &=
     validation.checkBlank(userName, "#nameErr", "* Vui lòng nhập tên") &&
@@ -80,17 +83,37 @@ let getUserInfo = () => {
       "* Số điện thoại không hợp lệ"
     );
   // GENDER
-  isValid = validation.checkRadio(
+  isValid &= validation.checkRadio(
     userGender,
     "#genderErr",
     "* Vui lòng chọn giới tính"
   );
-  console.log("Test: ", isValid);
-  console.log(userEmail, " ", typeof userEmail);
-  console.log(userPass, " ", typeof userPass);
-  console.log(userConfPass, " ", typeof userConfPass);
-  console.log(userName, " ", typeof userName);
-  console.log(userPhone, " ", typeof userPhone);
-  console.log(userGender, " ", typeof userGender);
-  console.log("<----------->");
+  // <---------------------->
+  if (isValid == true) {
+    var user = new CreateUser(
+      userEmail,
+      userPass,
+      userName,
+      userPhone,
+      userGender
+    );
+    return user;
+  } else return null;
+};
+// FUNCTION POST DATA API
+let postUser = () => {
+  var user = getUserInfo();
+  if (user !== null) {
+    var promise = axios({
+      url: `https://shop.cyberlearn.vn/api/Users/signup`,
+      method: "POST",
+      data: user,
+    });
+    promise.then(function (result) {
+      console.log(result.data);
+    });
+    promise.catch(function (error) {
+      console.log(error);
+    });
+  }
 };

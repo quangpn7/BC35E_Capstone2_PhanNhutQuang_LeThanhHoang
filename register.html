@@ -46,7 +46,7 @@
           </div>
           <div class="header__feature d-flex align-items-center">
             <i class="fa fa-shopping-cart"></i>
-            <span id="item_count">(1)</span>
+            <span id="item_count">(0)</span>
             <span><a href="#" id="btnLogin">Login</a></span>
             <span><a href="#" id="btnRegister">Register</a></span>
           </div>
@@ -99,15 +99,25 @@
         <div class="register__left col-6>">
           <!-- EMAIL -->
           <div class="register__email input-field">
-            <input id="email" type="email" placeholder="Email" />
-            <span class="inputRequired">(*)</span>
+            <input
+              id="email"
+              type="email"
+              placeholder="Email"
+              onchange="removeAsterisk(this,'#emailRequired')"
+            />
+            <span id="emailRequired" class="inputRequired">(*)</span>
           </div>
           <p class="register__invalid" id="emailErr"></p>
 
           <!-- PASSWORD -->
           <div class="register__password input-field">
-            <input id="password" type="password" placeholder="Password" />
-            <span class="inputRequired">(*)</span>
+            <input
+              id="password"
+              type="password"
+              placeholder="Password"
+              onchange="removeAsterisk(this,'#passRequired')"
+            />
+            <span id="passRequired" class="inputRequired">(*)</span>
           </div>
           <p class="register__invalid" id="passErr">* Mật khẩu không hợp lệ</p>
 
@@ -116,8 +126,9 @@
               id="confirmPassword"
               type="password"
               placeholder="Confirm password"
+              onchange="removeAsterisk(this,'#passConRequired')"
             />
-            <span class="inputRequired">(*)</span>
+            <span id="passConRequired" class="inputRequired">(*)</span>
           </div>
           <p class="register__invalid" id="confirmPassErr">
             * Mật khẩu không trùng khớp
@@ -128,15 +139,25 @@
         <div class="register__right col-6">
           <!-- NAME -->
           <div class="register__name input-field">
-            <input id="name" type="text" placeholder="Name" />
-            <span class="inputRequired">(*)</span>
+            <input
+              id="name"
+              type="text"
+              placeholder="Name"
+              onchange="removeAsterisk(this,'#nameRequired')"
+            />
+            <span id="nameRequired" class="inputRequired">(*)</span>
           </div>
           <p id="nameErr" class="register__invalid">* Tên không hợp lệ</p>
 
           <!-- PHONE -->
           <div class="register__phoneNumber input-field">
-            <input id="phone" type="number" placeholder="Phone" />
-            <span class="inputRequired">(*)</span>
+            <input
+              id="phone"
+              type="number"
+              placeholder="Phone"
+              onchange="removeAsterisk(this,'#phoneRequired')"
+            />
+            <span id="phoneRequired" class="inputRequired">(*)</span>
           </div>
           <p id="phoneErr" class="register__invalid">
             * Số điện thoại không hợp lệ
@@ -163,7 +184,7 @@
             </p>
           </div>
 
-          <button class="btn btn-submit" onclick="getUserInfo()">Submit</button>
+          <button class="btn btn-submit" onclick="postUser()">Submit</button>
         </div>
       </div>
     </section>

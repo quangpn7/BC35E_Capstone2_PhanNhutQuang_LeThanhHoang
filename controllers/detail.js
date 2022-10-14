@@ -77,10 +77,33 @@ getApiDetail();
 let countProduct = (boolean) => {
   let count = document.querySelector("#count").value * 1;
   if (boolean == true) {
-    count += 1;
+    if (count <= 19) {
+      count += 1;
+    }
   } else {
     if (count > 1) count -= 1;
   }
+
+  document.querySelector("#count").value = count;
+};
+let resetCount = (value) => {
+  if (value * 1 > 20) {
+    document.querySelector("#count").value = 20;
+  } else if (value * 1 < 1) {
+    document.querySelector("#count").value = 1;
+  }
+};
+//FUNCTION ADD TO CART
+let addCart = () => {
+  //EXISTED COUNT
+  let counted = document.querySelector("#item_count").innerHTML;
+  counted = counted.slice(1, -1) * 1;
+  console.log(counted);
+  // INPUT COUNT FROM USER
+  let inpCount = document.querySelector("#count").value * 1;
+  //FINAL COUNT
+  let finalCount = counted + inpCount;
+  document.querySelector("#item_count").innerHTML = `(${finalCount})`;
 };
 //FUNCTION ADD CLASS TO PRESSED SIZE BUTTON
 var addPresseed = () => {

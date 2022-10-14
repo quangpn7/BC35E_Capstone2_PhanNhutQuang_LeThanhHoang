@@ -57,3 +57,11 @@ function Validation() {
     return true;
   };
 }
+//FUNCTION REMOVE ASTERISK
+let removeAsterisk = (divCheck, divAddress) => {
+  if (divCheck.value !== "") {
+    document.querySelector(divAddress).style = "display: none;";
+  } else {
+    document.querySelector(divAddress).style = "display: inline-block;";
+  }
+};
