@@ -55,7 +55,7 @@ let getApiDetail = () => {
 
     for (let size of productDetail.size) {
       sizeBtnContent += `
-      <button class="size__button btn">${size}</button
+      <button class="size__button btn" onclick="addPresseed()">${size}</button
               >
       `;
     }
@@ -72,7 +72,8 @@ let getApiDetail = () => {
   });
 };
 getApiDetail();
-
+//ADDITION FUCTION
+//FUNCTION INCRE-DECRE
 let countProduct = (boolean) => {
   let count = document.querySelector("#count").value * 1;
   if (boolean == true) {
@@ -80,5 +81,13 @@ let countProduct = (boolean) => {
   } else {
     if (count > 1) count -= 1;
   }
-  document.querySelector("#count").value = count;
+};
+//FUNCTION ADD CLASS TO PRESSED SIZE BUTTON
+var addPresseed = () => {
+  $(".size__button").click(function (e) {
+    $(".size__button").removeClass("btn-pressed");
+
+    $(this).addClass("btn-pressed");
+    e.preventDefault();
+  });
 };

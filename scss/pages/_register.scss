@@ -15,7 +15,7 @@ section.register {
       p.register__invalid {
         @include styleText($fs-1, $fw-1, $color-red);
         font-style: italic;
-        display: inline;
+        display: none;
       }
 
       input {
@@ -37,6 +37,14 @@ section.register {
         width: 482px;
         padding-bottom: 5px;
       }
+      input[type="password"] {
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+      }
       .inputRequired {
         @include styleText($fs-3, $fw-2, $color-red);
       }
@@ -57,6 +65,9 @@ section.register {
           @include styleText($fs-3, $fw-2, $color-black);
           margin: 0;
           margin-right: 60px !important;
+        }
+        p {
+          margin-bottom: 0;
         }
       }
     }

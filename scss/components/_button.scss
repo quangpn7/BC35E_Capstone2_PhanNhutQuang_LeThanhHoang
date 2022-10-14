@@ -46,3 +46,11 @@
     #d017ee 89.71%
   );
 }
+
+.btn-submit {
+  padding: 6px 90px !important;
+  margin-top: 80px;
+
+  background-color: $color-purple;
+  @include styleText($fs-2, $fw-1, $color-white);
+}

@@ -56,7 +56,7 @@ function renderSlider(arrProduct) {
     <div class="carousel-text" style="width: 250px;">
       <h1 id="slider__productName" >${arrProduct[0].name}</h1>
       <p id="slider__productDesc" >${arrProduct[0].description}</p>
-      <a href="#" class="btn">Buy now</a>
+      <a href="./detail.html?id=${arrProduct[0].id}" class="btn">Buy now</a>
     </div>
   </div>`;
   // *FIRST ITEM MUST HAVE .active FOR USING BOOSTRAP CAROUSEL
@@ -74,7 +74,9 @@ function renderSlider(arrProduct) {
                     ? contentNextSlider.description.substr(0, 70) + "..."
                     : contentNextSlider.description
                 }</p>
-                <a href="#" class="btn">Buy now</a>
+                <a href="./detail.html?id=${
+                  contentNextSlider.id
+                }" class="btn">Buy now</a>
               </div>
             </div>
       `;

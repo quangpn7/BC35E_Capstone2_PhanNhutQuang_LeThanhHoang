@@ -40,7 +40,7 @@
           class="header__content d-flex justify-content-between align-items-center"
         >
           <div class="header__logo">
-            <a href="#"
+            <a href="./index.html"
               ><img src="./assets/img/image 3.png" alt="logoCybersoft"
             /></a>
           </div>
@@ -99,62 +99,73 @@
         <div class="register__left col-6>">
           <!-- EMAIL -->
           <div class="register__email input-field">
-            <input type="email" placeholder="Email" />
+            <input id="email" type="email" placeholder="Email" />
             <span class="inputRequired">(*)</span>
           </div>
-          <p class="register__invalid">* Email không hợp lệ</p>
+          <p class="register__invalid" id="emailErr"></p>
 
           <!-- PASSWORD -->
           <div class="register__password input-field">
-            <input type="password" placeholder="Password" />
+            <input id="password" type="password" placeholder="Password" />
             <span class="inputRequired">(*)</span>
           </div>
-          <p class="register__invalid">* Mật khẩu không hợp lệ</p>
+          <p class="register__invalid" id="passErr">* Mật khẩu không hợp lệ</p>
 
           <div class="register__password input-field">
-            <input type="password" placeholder="Confirm password" />
+            <input
+              id="confirmPassword"
+              type="password"
+              placeholder="Confirm password"
+            />
             <span class="inputRequired">(*)</span>
           </div>
-          <p class="register__invalid">* Mật khẩu không trùng khớp</p>
+          <p class="register__invalid" id="confirmPassErr">
+            * Mật khẩu không trùng khớp
+          </p>
         </div>
 
         <!-- RIGHT -->
         <div class="register__right col-6">
           <!-- NAME -->
           <div class="register__name input-field">
-            <input type="text" placeholder="Name" />
+            <input id="name" type="text" placeholder="Name" />
             <span class="inputRequired">(*)</span>
           </div>
-          <p class="register__invalid">* Tên không hợp lệ</p>
+          <p id="nameErr" class="register__invalid">* Tên không hợp lệ</p>
 
           <!-- PHONE -->
           <div class="register__phoneNumber input-field">
-            <input type="number" placeholder="Phone" />
+            <input id="phone" type="number" placeholder="Phone" />
             <span class="inputRequired">(*)</span>
           </div>
-          <p class="register__invalid">* Số điện thoại không hợp lệ</p>
+          <p id="phoneErr" class="register__invalid">
+            * Số điện thoại không hợp lệ
+          </p>
 
           <!-- GENDER -->
-          <div class="register__gender d-flex align-items-center input-field">
+          <div
+            class="register__gender d-flex align-items-center input-field justify-content-center"
+          >
             <span class="labelGender">Gender</span>
-            <input type="radio" id="genderMale" name="gender" value="male" />
-            <label for="genderMale">Male</label>
             <input
               type="radio"
-              id="genderFemale"
+              id="genderMale"
               name="gender"
-              value="female"
+              value="true"
+              checked
             />
+            <label for="genderMale">Male</label>
+            <input type="radio" id="genderFemale" name="gender" value="false" />
             <label for="genderFemale">Female</label>
+            <br />
+            <p id="genderErr" class="register__invalid">
+              * Vui lòng chọn giới tính
+            </p>
           </div>
-          <p class="register__invalid">* Vui lòng chọn giới tính</p>
+
+          <button class="btn btn-submit" onclick="getUserInfo()">Submit</button>
         </div>
       </div>
-      <style>
-        /* * {
-          outline: 1px solid #f00 !important;
-        } */
-      </style>
     </section>
     <!-- FOOTER -->
     <footer>
@@ -244,5 +255,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <!-- JS REGISTER -->
+    <script src="./models/Validation.js"></script>
+    <script src="./models/userRegister.js"></script>
+    <script src="./controllers/register.js"></script>
   </body>
 </html>

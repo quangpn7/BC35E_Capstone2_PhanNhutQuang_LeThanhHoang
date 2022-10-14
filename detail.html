@@ -40,7 +40,7 @@
           class="header__content d-flex justify-content-between align-items-center"
         >
           <div class="header__logo">
-            <a href="#"
+            <a href="/index.html"
               ><img src="./assets/img/image 3.png" alt="logoCybersoft"
             /></a>
           </div>
@@ -48,7 +48,7 @@
             <i class="fa fa-shopping-cart"></i>
             <span id="item_count">(1)</span>
             <span><a href="#" id="btnLogin">Login</a></span>
-            <span><a href="#" id="btnRegister">Register</a></span>
+            <span><a href="./register.html" id="btnRegister">Register</a></span>
           </div>
         </div>
       </div>
@@ -58,29 +58,13 @@
       <div class="navigation__wrap">
         <ul class="nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#" id="btnHome" onclick="getDataProduct()"
-              >Home</a
-            >
+            <a class="nav-link" href="#" id="btnHome">Home</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#"
-              id="btnMen"
-              value="men"
-              onclick="renderCategory('men')"
-              >Men</a
-            >
+            <a class="nav-link" href="#" id="btnMen" value="men">Men</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#"
-              id="btnWoman"
-              value="women"
-              onclick="renderCategory('women')"
-              >Woman</a
-            >
+            <a class="nav-link" href="#" id="btnWoman" value="women">Woman</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" id="btnKid">Kid</a>
@@ -278,7 +262,9 @@
                   Create one account to mangage everything you do with Nike,
                   from your shipping preferences to your Nike+ activity.
                 </p>
-                <a href="#" class="footer__redirectLink">Learn more</a>
+                <a href="./register.html" class="footer__redirectLink"
+                  >Learn more</a
+                >
               </div>
             </div>
           </div>
@@ -290,7 +276,9 @@
                 <p>
                   Be the first to know about new products and special offers.
                 </p>
-                <a href="#" class="footer__redirectLink">Sign up now</a>
+                <a href="./register.html" class="footer__redirectLink"
+                  >Sign up now</a
+                >
               </div>
               <div class="footer__block col-4">
                 <h4>GIFT CARD</h4>
@@ -332,23 +320,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-
-    <script>
-      document.addEventListener(
-        "DOMContentLoaded",
-        function () {
-          $(".size__button").click(function (e) {
-            console.log(123);
-            $(".size__button").removeClass("btn-pressed");
-
-            var $parent = $(this);
-            $parent.addClass("btn-pressed");
-            e.preventDefault();
-          });
-        },
-        false
-      );
-    </script>
 
     <script src="./controllers/detail.js"></script>
   </body>

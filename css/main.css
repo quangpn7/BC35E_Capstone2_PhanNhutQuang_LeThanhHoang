@@ -2,7 +2,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  user-drag: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
 }
 
 a:hover {
@@ -13,9 +16,13 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-input::-webkit-outer-spin-button input[type=number],
-input::-webkit-inner-spin-button input[type=number] {
+
+input[type=number] {
   -moz-appearance: textfield; /* Firefox */
+}
+
+button:focus {
+  box-shadow: none !important;
 }
 
 body,
@@ -107,6 +114,15 @@ section.navigation .navigation__wrap ul li.active a::after {
   font-weight: 500;
   color: #ffffff;
   background: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #d017ee 89.71%);
+}
+
+.btn-submit {
+  padding: 6px 90px !important;
+  margin-top: 80px;
+  background-color: #af19e3;
+  font-size: 20px;
+  font-weight: 300;
+  color: #ffffff;
 }
 
 section.slider {
@@ -413,7 +429,7 @@ section.register .register__wrap .register__right p.register__invalid {
   font-weight: 300;
   color: #fc0303;
   font-style: italic;
-  display: inline;
+  display: none;
 }
 section.register .register__wrap .register__left input,
 section.register .register__wrap .register__right input {
@@ -442,6 +458,14 @@ section.register .register__wrap .register__right input[type=password] {
   color: #000000;
   width: 482px;
   padding-bottom: 5px;
+}
+section.register .register__wrap .register__left input[type=password],
+section.register .register__wrap .register__right input[type=password] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 section.register .register__wrap .register__left .inputRequired,
 section.register .register__wrap .register__right .inputRequired {
@@ -474,4 +498,8 @@ section.register .register__wrap .register__right .register__gender label {
   color: #000000;
   margin: 0;
   margin-right: 60px !important;
+}
+section.register .register__wrap .register__left .register__gender p,
+section.register .register__wrap .register__right .register__gender p {
+  margin-bottom: 0;
 }/*# sourceMappingURL=main.css.map */
