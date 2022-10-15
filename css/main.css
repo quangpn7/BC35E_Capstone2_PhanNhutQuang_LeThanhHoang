@@ -350,6 +350,9 @@ footer {
   margin-top: 106px;
   width: 100%;
 }
+footer .footer__wrap {
+  overflow: hidden;
+}
 footer .footer__row-1,
 footer .footer__row-2 {
   background-color: #fafafa;

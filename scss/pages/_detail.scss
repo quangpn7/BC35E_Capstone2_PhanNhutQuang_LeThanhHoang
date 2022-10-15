@@ -60,6 +60,9 @@ section.product {
 footer {
   margin-top: 106px;
   width: 100%;
+  .footer__wrap {
+    overflow: hidden;
+  }
   .footer__row-1,
   .footer__row-2 {
     background-color: $color-light-green;

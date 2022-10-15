@@ -88,6 +88,7 @@ let getUserInfo = () => {
     "#genderErr",
     "* Vui lòng chọn giới tính"
   );
+
   // <---------------------->
   if (isValid == true) {
     var user = new CreateUser(
@@ -111,6 +112,10 @@ let postUser = () => {
     });
     promise.then(function (result) {
       console.log(result.data);
+      document.querySelector("#myModal").classList.add("show");
+      document.querySelector("#myModal").style = "display: block";
+
+      // window.location.reload;
     });
     promise.catch(function (error) {
       console.log(error);

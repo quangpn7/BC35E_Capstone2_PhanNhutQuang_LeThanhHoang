@@ -187,7 +187,48 @@
           <button class="btn btn-submit" onclick="postUser()">Submit</button>
         </div>
       </div>
+      <div class="container">
+        <!-- Button to Open the Modal -->
+        <!-- <button
+          type="button"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#myModal"
+        >
+          Open modal
+        </button> -->
+
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header justify-content-center">
+                <h4 class="modal-title text-center">SUCCESSFULLY REGISTERED</h4>
+              </div>
+              <!-- Modal body -->
+              <div class="modal-body">
+                Please check your email for confirming the information.
+
+                <b class="mt-3 d-block">Thank you!</b>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-submit m-0 px-2 py-1"
+                  onclick="window.location.reload()"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+
     <!-- FOOTER -->
     <footer>
       <section class="footer">

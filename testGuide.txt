@@ -1,5 +1,7 @@
 <-----TEST GUIDE----->
 
+<--------------------------------->
+
 1. index.html
 
 -Test các element của navbar: Home, Men, Women -> Khi ấn vào sẽ chạy filter các sản phẩm theo category (xem product feature sẽ có thay đổi)
@@ -17,6 +19,8 @@
 -Test redirect a:
 +Ấn vào logo góc trái sẽ reload lại trang
 +Ấn vào Register góc phải sẽ vào register.html
+
+<--------------------------------->
 
 2. detail.html
 
@@ -40,3 +44,10 @@
 
 + Hiệu ứng hover các thẻ <a>
 
+<--------------------------------->
+
+3. register.html
+
+-Vaidation: test như trong doc trong file ./models/validationDoc.txt
+
+-Các thẻ <a> test tương tự như phần ở register.html
