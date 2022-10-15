@@ -51,3 +51,5 @@
 -Vaidation: test như trong doc trong file ./models/validationDoc.txt
 
 -Các thẻ <a> test tương tự như phần ở register.html
+
+-Lưu ý khi đăng ký thành công sẽ load ra modal thông báo, sau khi ấn close sẽ reload lại trang
