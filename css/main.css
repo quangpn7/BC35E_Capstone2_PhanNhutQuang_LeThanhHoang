@@ -360,7 +360,7 @@ footer .footer__row-2 {
 }
 footer .footer__row-1 .footer__row,
 footer .footer__row-2 .footer__row {
-  width: 1000px;
+  width: 100%;
   margin: auto;
   padding: 25px 0;
 }
@@ -411,7 +411,7 @@ footer .footer__row-2 {
 }
 
 section.register {
-  width: 1280px;
+  width: 100%;
   margin: auto;
 }
 section.register .register__title {
@@ -423,8 +423,9 @@ section.register .register__title {
   color: #000000;
 }
 section.register .register__wrap {
-  width: 1100px;
+  max-width: 1100px;
   margin: auto;
+  overflow: hidden;
 }
 section.register .register__wrap .register__left p.register__invalid,
 section.register .register__wrap .register__right p.register__invalid {
