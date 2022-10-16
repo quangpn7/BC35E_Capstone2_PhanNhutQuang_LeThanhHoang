@@ -292,7 +292,9 @@ section.product .product__content .product__item .item-bottom .item-price.btn {
 }
 
 section.product .product__wrap {
-  width: 1200px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1280px;
   margin: auto;
 }
 section.product .product__wrap .product__left .product__frame {
@@ -348,7 +350,6 @@ section.product .product__wrap .product__right .product__price .product__addRemo
 
 footer {
   margin-top: 106px;
-  width: 100%;
 }
 footer .footer__wrap {
   overflow: hidden;
@@ -362,7 +363,7 @@ footer .footer__row-1 .footer__row,
 footer .footer__row-2 .footer__row {
   width: 100%;
   margin: auto;
-  padding: 25px 0;
+  padding: 25px 150px;
 }
 footer .footer__row-1 .footer__row .footer__block,
 footer .footer__row-2 .footer__row .footer__block {

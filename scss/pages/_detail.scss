@@ -1,7 +1,9 @@
 //PRODUCT DETAIL
 section.product {
   .product__wrap {
-    width: 1200px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1280px;
     margin: auto;
     .product__left {
       .product__frame {
@@ -59,7 +61,7 @@ section.product {
 // FOOTER
 footer {
   margin-top: 106px;
-  width: 100%;
+
   .footer__wrap {
     overflow: hidden;
   }
@@ -70,7 +72,7 @@ footer {
     .footer__row {
       width: 100%;
       margin: auto;
-      padding: 25px 0;
+      padding: 25px 150px;
       .footer__block {
         border-right: 1px solid $color-gray;
         h4 {
